@@ -5,12 +5,12 @@ import 'package:flutter/foundation.dart';
 
 import 'package:abctechapp/model/order_location.dart';
 
-class Oder {
+class Order {
   int operatorId = 0;
   List<int> Assists = [];
   OderLocation? start;
   OderLocation? end;
-  Oder({
+  Order({
     required this.operatorId,
     required this.Assists,
     required this.start,
