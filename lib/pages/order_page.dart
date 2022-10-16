@@ -70,7 +70,7 @@ class OrderPage extends GetView<OrderController> {
                 )
               ]),
               Obx(
-                () => renderAssist(controller.selectedAssists),
+                () => renderAssists(controller.selectedAssists),
               ),
               Row(children: [
                 Expanded(
