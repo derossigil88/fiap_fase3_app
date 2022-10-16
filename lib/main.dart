@@ -1,5 +1,7 @@
 import 'package:abctechapp/pages/home_bind.dart';
 import 'package:abctechapp/pages/home_page.dart';
+import 'package:abctechapp/pages/order_bind.dart';
+import 'package:abctechapp/pages/order_page.dart';
 import 'package:abctechapp/provider/assist_provider.dart';
 import 'package:abctechapp/service/assist_service.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +28,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.purple,
           textTheme: const TextTheme(headline4: TextStyle(color: Colors.blue))),
       getPages: [
-        GetPage(name: "/", page: () => HomePage(), binding: HomeBind())
+        GetPage(name: "/", page: () => OrderPage(), binding: OrderBind()),
+        GetPage(name: "/assists", page: () => HomePage(), binding: HomeBind())
       ],
     );
   }
