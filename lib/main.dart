@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'ABC TECH APP - Grupo K',
       theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
+          primarySwatch: Colors.purple,
           textTheme: const TextTheme(headline4: TextStyle(color: Colors.blue))),
       getPages: [
         GetPage(name: "/", page: () => HomePage(), binding: HomeBind())
