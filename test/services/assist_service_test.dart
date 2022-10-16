@@ -30,7 +30,7 @@ void main() {
 
   test('Testando tamanho da lista', () async {
     List<Assist> lista = await service.getAssists();
-    expect(lista.length, 10);
+    expect(lista.length, 15);
   });
 
   test('Testando o retorno da lista da posição 0', () async {
@@ -38,5 +38,11 @@ void main() {
     expect(lista[0].id, 1);
     expect(lista[0].name, 'Manutenção 1');
     expect(lista[0].description, 'Descrição 1');
+  });
+  test('Testando o retorno da lista da posição 1', () async {
+    List<Assist> lista = await service.getAssists();
+    expect(lista[0].id, 2);
+    expect(lista[0].name, 'Manutenção 2');
+    expect(lista[0].description, 'Descrição 2');
   });
 }
