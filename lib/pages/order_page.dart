@@ -76,7 +76,16 @@ class OrderPage extends GetView<OrderController> {
                 Expanded(
                     child: ElevatedButton(
                         onPressed: () => controller.finishStartOrder(),
-                        child: const Text('Finalizar')))
+                        child: Obx(
+                          () {
+                            if (controller.screenState.value ==
+                                OrderState.creating) {
+                              const Text('Iniciar');
+                            } else {
+                              const Text('Finalizar');
+                            }
+                          },
+                        )))
               ]),
             ],
           ),
