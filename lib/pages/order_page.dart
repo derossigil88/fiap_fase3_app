@@ -58,6 +58,7 @@ class OrderPage extends GetView<OrderController> {
                 Ink(
                   decoration: const ShapeDecoration(
                       shape: CircleBorder(), color: Colors.purpleAccent),
+                  // ignore: sort_child_properties_last
                   child: IconButton(
                     icon: const Icon(
                       Icons.search,
@@ -74,18 +75,16 @@ class OrderPage extends GetView<OrderController> {
               ),
               Row(children: [
                 Expanded(
-                    child: ElevatedButton(
-                        onPressed: () => controller.finishStartOrder(),
-                        child: Obx(
-                          () {
-                            if (controller.screenState.value ==
-                                OrderState.creating) {
-                              const Text('Iniciar');
-                            } else {
-                              const Text('Finalizar');
-                            }
-                          },
-                        )))
+                    child: ElevatedButton(onPressed: () {
+                  FocusScope.of(context).unfocus();
+                  controller.finishStartOrder();
+                }, child: Obx((() {
+                  if (controller.screenState.value == OrderState.creating) {
+                    return const Text("Inicar serviço");
+                  } else {
+                    return const Text("Finalizar serviço");
+                  }
+                }))))
               ]),
             ],
           ),

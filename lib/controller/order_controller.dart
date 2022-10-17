@@ -28,7 +28,6 @@ class OrderController extends GetxController with StateMixin<OrderCreated> {
   OrderController(
     this._geolocationService,
     this._orderService,
-    this._order,
   );
 
   @override

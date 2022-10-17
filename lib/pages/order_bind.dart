@@ -3,11 +3,12 @@ import 'package:abctechapp/provider/order_provider.dart';
 import 'package:abctechapp/service/geolocation_service.dart';
 import 'package:abctechapp/service/order_service.dart';
 import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 
 class OrderBind extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<OrderController>(() => OrderController(GeolocationService),
-        OrderService(OrderProvider()));
+    Get.lazyPut<OrderController>(() =>
+        OrderController(GeolocationService(), OrderService(OrderProvider())));
   }
 }
