@@ -10,13 +10,15 @@ class AssistService extends GetxService {
 
   Future<List<Assist>> getAssists() async {
     Response response = await assistProvider.getAssists();
+
     if (response.hasError) {
       return Future.error(ErrorDescription("Erro na conexão"));
     }
+
     try {
-      List<Assist> ListResult =
+      List<Assist> listResult =
           response.body.map<Assist>((item) => Assist.fromMap(item)).toList();
-      return Future.sync(() => ListResult);
+      return Future.sync(() => listResult);
     } catch (e) {
       e.printError();
       return Future.error(e.toString());
