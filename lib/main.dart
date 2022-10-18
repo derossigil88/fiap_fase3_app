@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.deepOrange,
           textTheme: const TextTheme(headline4: TextStyle(color: Colors.blue))),
       getPages: [
+        // ignore: prefer_const_constructors
         GetPage(name: "/", page: () => OrderPage(), binding: OrderBind()),
         GetPage(name: "/assists", page: () => HomePage(), binding: HomeBind())
       ],

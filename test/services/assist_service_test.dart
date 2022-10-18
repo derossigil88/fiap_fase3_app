@@ -18,6 +18,7 @@ void main() {
 
   setUp(() async {
     provider = MockAssistProviderInterface();
+    // ignore: await_only_futures
     service = await AssistService(assistProvider: provider);
 
     String json =
