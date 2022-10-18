@@ -12,7 +12,7 @@ void main() {
   runApp(const MyApp());
 }
 
-void initServices() async {
+void initServices() {
   Get.lazyPut(() => AssistService(assistProvider: AssistProvider()));
 }
 
