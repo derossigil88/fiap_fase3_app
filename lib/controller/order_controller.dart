@@ -1,17 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
 import 'dart:developer';
-
 import 'package:abctechapp/model/order_created.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-
 import 'package:abctechapp/model/assist.dart';
 import 'package:abctechapp/model/order.dart';
 import 'package:abctechapp/service/geolocation_service.dart';
 import 'package:abctechapp/service/order_service.dart';
-
 import '../model/order_location.dart';
 
 enum OrderState { creating, started, finished }
@@ -34,6 +30,7 @@ class OrderController extends GetxController with StateMixin<OrderCreated> {
   void onInit() {
     super.onInit();
     _geolocationService.start();
+    change(null, status: RxStatus.success());
   }
 
   getLocation() {

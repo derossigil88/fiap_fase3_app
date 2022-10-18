@@ -1,7 +1,5 @@
 // ignore_for_file: unused_element
 
-import 'dart:ffi';
-
 import 'package:geolocator/geolocator.dart';
 
 abstract class GeolocationServiceInterface {

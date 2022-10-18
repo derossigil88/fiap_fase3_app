@@ -11,18 +11,6 @@ class OrderLocation {
     required this.dateTime,
   });
 
-  OrderLocation copyWith({
-    double? latitude,
-    double? longitutde,
-    DateTime? dateTime,
-  }) {
-    return OrderLocation(
-      latitude: latitude ?? this.latitude,
-      longitude: longitutde ?? this.longitude,
-      dateTime: dateTime ?? this.dateTime,
-    );
-  }
-
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'latitude': latitude,

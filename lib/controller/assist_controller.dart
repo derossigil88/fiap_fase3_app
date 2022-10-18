@@ -17,7 +17,7 @@ class AssistController extends GetxController with StateMixin<List<Assist>> {
   @override
   void onReady() {
     super.onReady();
-    selectAssists = Get.arguments();
+    selectAssists = Get.arguments;
   }
 
   void getAssistList() {

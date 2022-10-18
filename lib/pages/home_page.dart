@@ -12,7 +12,7 @@ class HomePage extends GetView<AssistController> {
         itemCount: assist.length,
         itemBuilder: ((context, index) => ListTile(
               title: Text(assist[index].name),
-              selectedColor: Colors.deepPurple,
+              selectedColor: Colors.orange,
               selected: controller.isSelected(index),
               onTap: () => controller.selectAssist(index),
             )));
