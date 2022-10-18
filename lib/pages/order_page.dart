@@ -17,14 +17,13 @@ class OrderPage extends GetView<OrderController> {
             ListTile(title: Text(assists[index].name)));
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Teste')),
+      appBar: AppBar(title: const Text('Ordem de Serviço')),
       body: Container(
         constraints: const BoxConstraints.expand(),
         padding: const EdgeInsets.all(10.0),
-        child: Form(
+        child: SingleChildScrollView(
           key: controller.formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
