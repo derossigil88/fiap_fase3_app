@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-
 import '../model/assist.dart';
 
 class HomePage extends GetView<AssistController> {
@@ -23,7 +22,7 @@ class HomePage extends GetView<AssistController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lista de Serviços: '),
+        title: const Text('Lista de Serviços'),
       ),
       body: Container(
           constraints: const BoxConstraints.expand(),
@@ -43,22 +42,10 @@ class HomePage extends GetView<AssistController> {
                                     fontWeight: FontWeight.bold))))
                   ],
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                        child: TextButton(
-                      onPressed: controller.GetAssistList,
-                      child: const Text('Recarregar'),
-                    ))
-                  ],
-                ),
-                controller.obx(
-                  (state) => renderAssist(state ?? []),
-                  onEmpty: const Image(
-                      image: NetworkImage(
-                          'https://media.tenor.com/9ud1r4sc-QQAAAAM/confused-john-travolta.gif')),
-                  onError: (error) => Text(error.toString()),
-                )
+                controller.obx((state) => renderAssist(state ?? []),
+                    onLoading: const Text("Carregando"),
+                    onEmpty: const Text("Nenhum"),
+                    onError: (error) => Text(error.toString()))
               ],
             ),
           )),

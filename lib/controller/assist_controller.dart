@@ -42,11 +42,12 @@ class AssistController extends GetxController with StateMixin<List<Assist>> {
   }
 
   void selectAssist(int index) {
-    Assist assistamce = allAssists[index];
+    //print(index);
+    Assist assistance = allAssists[index];
     int indexFound =
-        selectAssists.indexWhere((element) => element.id == assistamce.id);
+        selectAssists.indexWhere((element) => element.id == assistance.id);
     if (indexFound == -1) {
-      selectAssists.add(assistamce);
+      selectAssists.add(assistance);
     } else {
       selectAssists.removeAt(indexFound);
     }
