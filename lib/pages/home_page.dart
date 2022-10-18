@@ -1,10 +1,9 @@
 import 'package:abctechapp/controller/assist_controller.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import '../model/assist.dart';
 
+// ignore: use_key_in_widget_constructors
 class HomePage extends GetView<AssistController> {
   Widget renderAssist(List<Assist> assist) {
     return ListView.builder(
