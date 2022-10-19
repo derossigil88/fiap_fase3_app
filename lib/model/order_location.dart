@@ -14,7 +14,7 @@ class OrderLocation {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'latitude': latitude,
-      'longitutde': longitude,
+      'longitude': longitude,
       'dateTime': dateTime.millisecondsSinceEpoch,
     };
   }
@@ -22,7 +22,7 @@ class OrderLocation {
   factory OrderLocation.fromMap(Map<String, dynamic> map) {
     return OrderLocation(
       latitude: map['latitude'] as double,
-      longitude: map['longitutde'] as double,
+      longitude: map['longitude'] as double,
       dateTime: DateTime.fromMillisecondsSinceEpoch(map['dateTime'] as int),
     );
   }
@@ -34,7 +34,7 @@ class OrderLocation {
 
   @override
   String toString() =>
-      'OderLocation(latitude: $latitude, longitutde: $longitude, dateTime: $dateTime)';
+      'OderLocation(latitude: $latitude, longitude: $longitude, dateTime: $dateTime)';
 
   @override
   bool operator ==(covariant OrderLocation other) {

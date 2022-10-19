@@ -1,3 +1,4 @@
 class Contants {
-  static const url = 'http://localhost:8080';
+  static const url =
+      'http://localhost:8080/';
 }
