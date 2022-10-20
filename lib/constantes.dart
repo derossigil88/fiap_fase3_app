@@ -1,4 +1,4 @@
 class Contants {
   static const url =
-      'http://localhost:8080/';
+      'http://abctechapi-env-1.eba-vbeupmrr.us-east-1.elasticbeanstalk.com/';
 }
